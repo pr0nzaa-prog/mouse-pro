@@ -1,0 +1,44 @@
+body{
+    background-color: #fce4ec;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+}
+#info-text{
+    font-size: 24px;
+color: #880e4f;
+
+}
+.trail{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(255,105,180);
+    pointer-events: none;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+}
+.trail.stopped{
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+}
+.trail.stopped::after{
+    content: "muahhh nzam";
+    position: absolute;
+    top: -25px;
+    left: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+}
+
+.trail.stopped::after{
+    opacity: 1;
+}
